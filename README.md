@@ -6,6 +6,7 @@ Welcome to my Designer Portfolio 💼 — a sleek, modern, and interactive portf
 
 - ⚛️ React.js – Component-based UI
 - 🌐 Next.js – Framework for server-side rendering and routing
+- 🎨 Tailwind CSS – Utility-first styling for rapid UI development
 - ✨ GSAP – Smooth and high-performance animations
 
 ## Features
