@@ -1,26 +1,104 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #fefefe;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+
+a,
+p {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  backface-visibility: hidden;
+}
+
+/* Gallery Styling */
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100svh;
+}
+
+.card {
+  position: absolute;
+  width: 45px;
+  height: 60px;
+  border-radius: 4px;
+  transform-origin: center;
+  will-change: transform;
+  transform-style: preserve-3d;
+  backface-visibility: visible;
+  overflow: hidden;
+}
+
+.title-container {
+  position: fixed;
+  bottom: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 42px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.title-container p {
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+  font-size: 36px;
+  letter-spacing: -0.05rem;
+}
+
+.word {
+  position: relative;
+  display: inline-block;
+  will-change: transform;
+}
+
+/* Navbar Styling */
+.menu-toggle p{
+  position: absolute;
+  transform-origin: top left;
+  will-change: transform, opacity;
+}
+
+.menu-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 4rem;
+  display: flex;
+  align-items: flex-start;
+  transform-origin: left bottom;
+  will-change: transform, opacity;
+}
+
+.menu-toggle p#menu-close {
+  opacity: 0;
+  transform: translateX(-5px) translateY(10px) rotate(5deg);
+}
+
+.menu-content {
+  transform: translateX(-100px) translateY(-100px) rotate(-15deg) scale(1.5);
+}
+
+.menu-overlay{
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
 }
