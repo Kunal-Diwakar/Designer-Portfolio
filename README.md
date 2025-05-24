@@ -18,3 +18,4 @@ Welcome to my Designer Portfolio 💼 — a sleek, modern, and interactive portf
 
 ## Screenshot 📸
 
+![image](https://github.com/user-attachments/assets/41419f1d-5195-4080-8eec-734ecbba3831)
